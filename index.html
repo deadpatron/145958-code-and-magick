@@ -184,16 +184,15 @@
 'use strict';
 
   var fireballSize = 22;
+  var getFireballSpeed;
 
-    function calculateFireballSpeed(left) {
+    function calculateFireballSpeed(getFireballSpeed) {
     var speed = 5;
-    if (left) {
+    if (getFireballSpeed) {
       speed -= 3;
     }
     return speed;
   }
-
-  var getFireballSpeed = calculateFireballSpeed(true);
 
 var wizardSpeed = 3;
 var wizardWidth = 70;

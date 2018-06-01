@@ -184,35 +184,29 @@
 'use strict';
 
   var fireballSize = 22;
-  var getFireballSpeed;
-
-    function calculateFireballSpeed(getFireballSpeed) {
+  
+  var getFireballSpeed = function (left) {
     var speed = 5;
-    if (getFireballSpeed) {
+    if (left) {
       speed -= 3;
     }
     return speed;
   }
 
-var wizardSpeed = 3;
-var wizardWidth = 70;
+  var wizardSpeed = 3;
+  
+  var wizardWidth = 70;
+  var getWizardHeight = wizardWidth * function () {
+    return 1.337;
+  }
 
-var getWizardHeight = function calculateWizardHeight(wizardWidth) {
-  var speed = 1.337 * wizardWidth;
-  return speed;
-}
+  function getWizardX(width) {
+    return width / 2;
+  }
 
-// как лучше делать функции? меньше строк или более наглядно?
-// или это только мне так более наглядно?)
-
-function getWizardX(width) {
-  return width / 2;
-}
-
-function getWizardY(height) {
-  var startHeight = height / 3;
-  return startHeight;
-}
+  function getWizardY(height) {
+    return height / 3;
+  }
 
 </script>
 <script src="js/game.js"></script>
